@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Grupo;
+use App\Models\Preferencia;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,6 +19,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CategoriaSeeder::class,
+            EstadoSeeder::class,
+            EstadoEmpleadoSeeder::class,
+            GrupoSeeder::class,
+            PreferenciaSeeder::class,
+            TipoPermisoSeeder::class,
+            UnidadSeeder::class,
         ]);
 
         User::factory()->create([
